@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="">
+ <form #myform="ngForm" (ngSubmit)="search(myform)" >
+
+            <h4>Filter cars by:</h4><br>
+
+            <div class="form-group">
+                <label for="color">Color</label>
+                <select id="color" name="color" [(ngModel)]="color" class="form-control" ngModel> 
+                    <option *ngFor="let colour of colors" [value]="colour.name" >
+                        {{colour.name}}
+                    </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <div class="form control">
+                    <label class ="checkbox-inline">
+                        <input type="hidden" name="hasSunRoof" value="false" ng-model="carsearchrequest.hasSunRoof" ngModel>
+                        <input type="checkbox" name="hasSunRoof" ng-model="carsearchrequest.hasSunRoof" ngModel>Sun Roof
+                    </label><br>
+
+                    <label class ="checkbox-inline">
+                        <input type="hidden" name="isFourWheelDrive" value="false" ng-model="carsearchrequest.isFourWheelDrive" ngModel>
+                        <input type="checkbox" name="isFourWheelDrive" ng-model="carsearchrequest.isFourWheelDrive" ngModel>Four Wheel Drive
+                    </label><br>
+
+                    <label class ="checkbox-inline">
+                        <input type="hidden" name="hasLowMiles" value="false" ng-model="carsearchrequest.hasLowMiles" ngModel>
+                        <input type="checkbox" name="hasLowMiles" ng-model="carsearchrequest.hasLowMiles" ngModel>Low Miles
+                    </label><br>
+
+                    <label class ="checkbox-inline">
+                        <input type="hidden" name="hasPowerWindows" value="false">
+                        <input type="checkbox" name="hasPowerWindows" ng-model="carsearchrequest.hasPowerWindows" ngModel>Power Windows
+                    </label><br>
+
+                    <label class ="checkbox-inline">
+                        <input type="hidden" name="hasNavigation" value="false">
+                        <input type="checkbox" name="hasNavigation" ng-model="carsearchrequest.hasNavigation" ngModel>Navigation
+                    </label><br>
+
+                    <label class ="checkbox-inline">
+                        <input type="hidden" name="hasHeatedSeats" value="false">
+                        <input type="checkbox" name="hasHeatedSeats" ng-model="carsearchrequest.hasHeatedSeats" ngModel>Heated Seats
+                    </label><br>
+                </div>
+
+            </div>
+            <div class="form-field">
+                <input type="submit" value="Search"> 
+
+              </div>
+
+ </form>
+           
+</body>
+</html>

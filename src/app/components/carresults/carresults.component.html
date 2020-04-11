@@ -1,0 +1,27 @@
+
+
+    <div class="container">
+        <div>
+            <h3>Car Results: {{cars.length}}</h3><br>
+        </div>
+        <div class="row">
+      <div class="col-sm-4" *ngFor="let car of cars | async">
+
+
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h4 class="card-title">{{car.make}}</h4>
+            <p class="card-text" >Year: {{car.year}}</p>
+            <p class="card-text">Color: {{car.color}}</p>
+            <p class="card-text">Price: ${{car.price}}</p>
+            <p class="card-text">Has sunroof: {{(car.hasSunRoof)?'Yes':'No'}}</p>
+            <p class="card-text">Four-Wheel Drive: {{(car.isFourWheelDrive)?'Yes':'No'}}</p>
+            <p class="card-text">Low Miles: {{(car.hasLowMiles)?'Yes':'No'}}</p>
+            <p class="card-text">Power Windows: {{(car.hasPowerWindows)?'Yes':'No'}}</p>
+            <p class="card-text">Navigation: {{(car.hasNavigation)?'Yes':'No'}}</p>
+            <p class="card-text">Heated Seats: {{(car.hasHeatedSeats)?'Yes':'No'}}</p>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
