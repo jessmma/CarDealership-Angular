@@ -8,7 +8,7 @@
 
             <div class="form-group">
                 <label for="colors">Color</label>
-                <select id="colors" name="color" [(ngModel)]="colors" class="form-control" ngModel> 
+                <select id="colors" name="color" [(ngModel)]="color" class="form-control" ngModel> 
                     <option *ngFor="let colour of colors" [value]="colour.name" >
                         {{colour.name}}
                     </option>
