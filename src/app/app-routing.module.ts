@@ -5,8 +5,8 @@ import { CarresultsComponent } from './components/carresults/carresults.componen
 
 
 const routes: Routes = [
-  {path: '', component: CarsComponent},
-  {path: 'carresults', component: CarresultsComponent}
+  {path: 'car/search', component: CarsComponent},
+  {path: 'car/results', component: CarresultsComponent}
 ];
 
 @NgModule({
