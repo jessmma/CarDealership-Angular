@@ -4,11 +4,11 @@
 <body ng-app="">
  <form #myform="ngForm" (ngSubmit)="search(myform)" >
 
-            <h4>Filter cars by:</h4><br>
+            <h4>Filter cars by: </h4><br>
 
             <div class="form-group">
-                <label for="color">Color</label>
-                <select id="color" name="color" [(ngModel)]="colors" class="form-control" ngModel> 
+                <label for="colors">Color</label>
+                <select id="colors" name="color" [(ngModel)]="colors" class="form-control" ngModel> 
                     <option *ngFor="let colour of colors" [value]="colour.name" >
                         {{colour.name}}
                     </option>
